@@ -9,3 +9,6 @@ Símbolo Vazio: A letra não faz parte da palavra.
 chegar à palavra correta. O jogo termina quando o jogador adivinha a 
 palavra ou esgota as tentativas disponíveis
 
+## Técnologias sendo utilizadas: Vs code, Figma, Github.
+
+## Um detalhe a ressaltar seria o limite de palavras pré-selecionadas que serão utilizdas.
