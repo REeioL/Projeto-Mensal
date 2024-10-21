@@ -1,4 +1,4 @@
-# Projeto Mensal 2
+# Projeto Mensal
 ## O projeto consiste em um "jogo de adivinhação de palavras" de cinco letras onde palavras pré-selecionadas são aleatorizadas a cada tentativa. O jogador terá algumas tentativas, a cada tentativa, o jogador digita uma palavra e recebe um feedback visual:
 
 Símbolo Cheio: A letra faz parte da palavra e está na posição correta.
