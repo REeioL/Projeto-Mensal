@@ -1,0 +1,77 @@
+body {
+    font-family: 'Fredoka', sans-serif;
+    text-align: center;
+    background-color: #8b8b8b;
+    color: black;
+}
+
+.botao{
+    border: solid 1px blue;
+    border-radius: 20px;
+    color: blue;
+    background-color: white;
+    transition: background-color 0.5s ease, color 0.5s ease, transform 0.5s ease;
+}
+.botao:hover{
+    background-color: blue;
+    color: white;
+    transform: scale(1.2)
+}
+#board {
+    margin-top: 20px;
+    width: 350px; /* Largura total do tabuleiro */
+    margin: 0 auto; /* Centraliza o tabuleiro */
+}
+
+.row {
+    display: flex; /* Exibe as células em linha */
+    margin-bottom: 5px; /* Espaço entre as linhas */
+    margin: 20px;
+    
+}
+
+.cell {
+    width: 50px; /* Largura de cada célula */
+    height: 50px; /* Altura de cada célula */
+    font-size: 30px; /* Tamanho da fonte */
+    font-weight: bold; /* Peso da fonte */
+    text-align: center; /* Centraliza o texto dentro da célula */
+    background-color: #ffffff; /* Cor de fundo da célula */
+    color: rgb(5, 5, 5); /* Cor do texto */
+    border: 2px solid rgb(7, 7, 7); /* Borda em cada célula */
+    border-radius: 5px; /* Arredonda os cantos da célula (opcional) */
+    margin-right: 5px; /* Espaço entre as células */
+    
+}
+
+.cell:hover {
+    background-color: rgb(226, 17, 202);
+  }
+  
+
+.cell:last-child {
+    margin-right: 0; /* Remove a margem à direita do último contêiner da linha */
+}
+input {
+    width: 50px;
+    height: 50px;
+    font-size: 24px;
+    text-align: center;
+}
+
+
+
+.correto{
+    border: solid 3px;
+    border-color: rgb(62, 151, 49);
+}
+
+.quaseCorreto{
+    border: solid 3px;
+    border-color: yellow;
+}
+
+.errado{
+    border: solid 3px;
+    border-color: red;
+}
