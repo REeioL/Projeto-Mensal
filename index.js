@@ -11,7 +11,6 @@ function inicializarJogo(){
     ];
     palavraAtual = pegarPalavraAleatoriaParaRodada(palavras);
 }
-d sadad
 
 function play(){
     const tentativas = document.getElementById("tentativas");
