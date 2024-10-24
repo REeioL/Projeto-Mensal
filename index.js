@@ -1,8 +1,8 @@
 var palavraAtual;
 function pegarPalavraAleatoriaParaRodada(palavras){
-    return palavraDaRodada = palavras[0];
+    return palavraDaRodada = palavras[Math.floor(Math.random() * palavras.length)];
 }
-
+console.log(palavraAtual)
 function inicializarJogo(){
     const palavras = [
         "gatos", "piano", "vapor", "pleno", "folha", "campo", "trono", "bravo", "vento", "festa",
