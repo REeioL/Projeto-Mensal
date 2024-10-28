@@ -1,4 +1,5 @@
 var palavraAtual;
+
 function pegarPalavraAleatoriaParaRodada(palavras){
     return palavraDaRodada = palavras[Math.floor(Math.random() * palavras.length)];
 }
@@ -11,6 +12,7 @@ function inicializarJogo(){
     ];
     palavraAtual = pegarPalavraAleatoriaParaRodada(palavras);
 }
+
 
 function play(){
     const tentativas = document.getElementById("tentativas");
@@ -27,12 +29,12 @@ function play(){
 
 inicializarJogo()
 
-
+//Função onde a validação dos inputs são criados para o feedback visual do usuário.
 function gerarTentativa(palavra){
     console.log(palavra.length)
     inputTentativas = document.createElement("div")
     for(let i = 0; i < palavra.length; i++){
-        inputTentativas.appendChild(gerarInputTentativa(verificarPlavra(palavra.charAt(i), palavra), palavra.charAt(i)))
+        inputTentativas.appendChild(gerarInputTentativa(verificarPalavra(palavra.charAt(i), palavra), palavra.charAt(i)))
     }
 
     console.log(inputTentativa)
@@ -42,7 +44,7 @@ function gerarTentativa(palavra){
 
 }
 
-
+//Função para criação de novos 5 inputs (onde são digitadas as palavras) após a ativação do botão "Enviar".
 function gerarInputTentativa(borda, letra){
     inputTentativa = document.createElement("input");
     inputTentativa.value = letra;
@@ -50,11 +52,18 @@ function gerarInputTentativa(borda, letra){
     return inputTentativa
 }
 
-
-function verificarPlavra(letra, palavra){
-
-    return "correto"
-
-
-
+//Validação de palavras onde estarão "corretas", "quaseCorretas" ou "errado". 
+function verificarPalavra(letra, palavraAtual){
+    console.log(letra)
+    console.log(palavraAtual)
+    for(let i = 0; i < palavraAtual.length; i++){
+        if (palavraAtual.charAt(i) === letra) {
+    return "correto";
+        }
+    }
+        if (palavraAtual.includes(letra)) {
+        return "quaseCorreto"
+    }else{
+    return "errado";
+    }
 }
