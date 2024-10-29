@@ -1,22 +1,138 @@
 body {
-    font-family: 'Fredoka', sans-serif;
+    font-family: Impact, sans-serif;
     text-align: center;
-    background-color: #8b8b8b;
-    color: black;
+    background-image: url(background.jpg);
+    background-repeat: repeat;
+    background-size:cover;
+    background-position: center relative;
+    color: rgb(8, 8, 8);
+    overflow: hidden;
+}
+  
+
+.title {
+    font-size: 50px;
 }
 
-.botao{
-    border: solid 1px blue;
-    border-radius: 20px;
-    color: blue;
-    background-color: white;
-    transition: background-color 0.5s ease, color 0.5s ease, transform 0.5s ease;
+ul li a i {
+    font-size: 50px; /* Ajuste o tamanho desejado */
 }
-.botao:hover{
-    background-color: blue;
-    color: white;
-    transform: scale(1.2)
-}
+
+
+/* Multiplayer */
+    .containermulti {
+        display: flex; /* Usando Flexbox para alinhar os filhos lado a lado */
+        justify-content: space-between; /* Espaçamento entre os elementos */
+    }
+
+    aside {
+        flex: 1; /* O aside ocupa 1 parte do espaço */
+        margin-left: 100px;
+        padding: 20px; /* Espaçamento interno do aside */
+       
+    }
+
+    article {
+        flex: 1; /* O article ocupa 1 parte do espaço */
+        margin-right: 100px;
+        padding: 20px; /* Espaçamento interno do artigo */
+        
+    }
+/* Multiplayer */
+
+/*Ranking*/
+    .ranking-container {
+        max-width: 600px; /* Largura máxima do contêiner */
+        margin: 0 auto; /* Centraliza o contêiner */
+        text-align: center; /* Centraliza o texto */
+    }
+    .ranking-table {
+        width: 100%; /* Largura total da tabela */
+        border-collapse: collapse; /* Remove espaçamento entre células */
+        margin-top: 20px; /* Espaçamento acima da tabela */
+    }
+
+    .ranking-table th, .ranking-table td {
+        border: 2px solid #030303; /* Borda das células */
+        padding: 8px; /* Espaçamento interno das células */
+    }
+
+    .ranking-table th {
+        background-color: rgb(250, 128, 13); /* Cor de fundo do cabeçalho */
+        color: rgb(3, 3, 3); /* Cor do texto do cabeçalho */
+    }
+
+    .ranking-table th:hover{
+        background-color: #f3f6f8d8; /* Cor de fundo ao passar o mouse */
+        transition: 0.3s all;
+    }
+    .ranking-table tr:nth-child(even) {
+        background-color: rgb(250, 128, 13); /* Cor de fundo das linhas pares */
+    
+    }
+
+    .ranking-table tr:hover {
+        background-color: #f3f6f8d8; /* Cor de fundo ao passar o mouse */
+        transition: 0.3s all;
+    }
+/*Ranking*/
+
+/*Tutorial (instruções do jogo)*/
+    .instrucoes-container {
+        max-width: 800px; /* Largura máxima do contêiner */
+        margin: 0 auto; /* Centraliza o contêiner */
+        padding: 20px; /* Espaçamento interno do contêiner */
+        background-color: #f3f6f8d8; /* Cor de fundo do contêiner */
+        border-radius: 8px; /* Bordas arredondadas */
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Sombra para profundidade */
+    }
+
+    .paragrafo {
+        font-size: 18px; /* Aumenta o tamanho da letra */
+        line-height: 1.6; /* Melhora o espaçamento entre linhas */
+        text-align: justify; /* Justifica o texto */
+    }
+/*Tutorial (instruções do jogo)*/
+
+/*botão para validação da palavra*/
+    button {
+        background-color: #D2691E; /* Cor de fundo estilo bloco */
+        color: rgb(8, 8, 8);
+        font-weight: bold;
+        font-size: 1.2rem;
+        padding: 15px 20px;
+        border: 4px solid #8B4513; /* Borda marrom mais escura */
+        border-radius: 5px;
+        box-shadow: 5px 5px #8B4513, 10px 10px #A0522D; /* Sombra para simular profundidade */
+        cursor: pointer;
+        text-transform: uppercase;
+        font-family: sans-serif;
+        transition: transform 0.1s ease;
+    }
+
+    button:hover{
+        background-color: rgb(179, 195, 240);
+        transition: 0.3s all;
+    }
+/*botão para validação da palavra*/
+/*Botão superior para mudança de abas*/
+    li{
+        display: inline-block;
+        margin: 10px;
+    }
+
+
+    a{
+    color: black
+    
+    }
+
+    a:hover{
+        color: rgb(248, 122, 5);
+        transition: 0.3s all;
+    }
+/*Botão superior para mudança de abas*/
+
 #board {
     margin-top: 20px;
     width: 350px; /* Largura total do tabuleiro */
@@ -36,8 +152,8 @@ body {
     font-size: 30px; /* Tamanho da fonte */
     font-weight: bold; /* Peso da fonte */
     text-align: center; /* Centraliza o texto dentro da célula */
-    background-color: #ffffff; /* Cor de fundo da célula */
-    color: rgb(5, 5, 5); /* Cor do texto */
+    background-color: #D2691E; /* Cor de fundo da célula */
+    color: rgba(1, 4, 5, 0.884); /* Cor do texto */
     border: 2px solid rgb(7, 7, 7); /* Borda em cada célula */
     border-radius: 5px; /* Arredonda os cantos da célula (opcional) */
     margin-right: 5px; /* Espaço entre as células */
@@ -45,13 +161,16 @@ body {
 }
 
 .cell:hover {
-    background-color: rgb(226, 17, 202);
+    background-color: rgb(179, 195, 240);
+    transition: 0.3s all;
   }
   
 
 .cell:last-child {
     margin-right: 0; /* Remove a margem à direita do último contêiner da linha */
 }
+
+
 input {
     width: 50px;
     height: 50px;
@@ -62,16 +181,61 @@ input {
 
 
 .correto{
+    width: 50px; /* Largura de cada célula */
+    height: 50px; /* Altura de cada célula */
+    font-size: 30px; /* Tamanho da fonte */
+    font-weight: bold; /* Peso da fonte */
+    text-align: center; /* Centraliza o texto dentro da célula */
+    color: rgba(1, 4, 5, 0.884); /* Cor do texto */
+    background-color: rgb(120, 226, 155);
+    border: 2px solid rgb(7, 7, 7); /* Borda em cada célula */
+    border-radius: 5px; /* Arredonda os cantos da célula (opcional) */
+    margin-right: 5px; /* Espaço entre as células */
     border: solid 3px;
-    border-color: rgb(62, 151, 49);
+    border-color: rgb(22, 139, 4);
+    
 }
+
+.correto:hover {
+   
+    background-color: rgb(8, 207, 74);
+    transition: 0.3s;
+  }
 
 .quaseCorreto{
+    width: 50px; /* Largura de cada célula */
+    height: 50px; /* Altura de cada célula */
+    font-size: 30px; /* Tamanho da fonte */
+    font-weight: bold; /* Peso da fonte */
+    text-align: center; /* Centraliza o texto dentro da célula */
+    color: rgba(1, 4, 5, 0.884); /* Cor do texto */
+    background-color: rgb(233, 240, 112);
+    border: 2px solid rgb(7, 7, 7); /* Borda em cada célula */
+    border-radius: 5px; /* Arredonda os cantos da célula (opcional) */
+    margin-right: 5px; /* Espaço entre as células */
     border: solid 3px;
-    border-color: yellow;
+    border-color: rgb(182, 182, 5);
 }
+.quaseCorreto:hover {
+    background-color: rgb(247, 247, 6);
+    transition: 0.3s;
+  }
 
 .errado{
+    width: 50px; /* Largura de cada célula */
+    height: 50px; /* Altura de cada célula */
+    font-size: 30px; /* Tamanho da fonte */
+    font-weight: bold; /* Peso da fonte */
+    text-align: center; /* Centraliza o texto dentro da célula */
+    color: rgba(1, 4, 5, 0.884); /* Cor do texto */
+    background-color: rgb(247, 119, 119);
+    border: 2px solid rgb(7, 7, 7); /* Borda em cada célula */
+    border-radius: 5px; /* Arredonda os cantos da célula (opcional) */
+    margin-right: 5px; /* Espaço entre as células */
     border: solid 3px;
-    border-color: red;
+    border-color: rgb(175, 5, 5);
 }
+.errado:hover {
+    background-color: rgb(247, 40, 40);
+    transition: 0.3s;
+  }
