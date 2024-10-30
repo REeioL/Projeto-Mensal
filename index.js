@@ -3,8 +3,11 @@ var pontuacao = 0;
 var tempoLimite = 60; // 5 minutos em segundos
 var temporizador;
 
+const palavrasUsadas = new Set();
+
 // Função para selecionar uma palavra aleatória
 function pegarPalavraAleatoriaParaRodada(palavras) {
+
     palavraAtual = palavras[Math.floor(Math.random() * palavras.length)];
     return palavraAtual;
 }
