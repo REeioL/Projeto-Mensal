@@ -2,10 +2,20 @@ var palavraAtual;
 var pontuacao = 0;
 var tempoLimite = 60; // Tempo limite em segundos
 var temporizador;
+var palavrasUsadas = new Set();
 
 // Função para selecionar uma palavra aleatória
 function pegarPalavraAleatoriaParaRodada(palavras) {
-    palavraAtual = palavras[Math.floor(Math.random() * palavras.length)];
+    let novaPalavra;
+    do{
+        novaPalavra = palavras[Math.floor(Math.random() * palavras.length)];
+    }while(palavrasUsadas.has(novaPalavra) && palavrasUsadas.size < palavras.length);
+
+    palavrasUsadas.add(novaPalavra);
+    if (palavrasUsadas.size === palavras.length){
+        palavrasUsadas.clear();
+    }
+    palavraAtual = novaPalavra
     return palavraAtual;
 }
 
