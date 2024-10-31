@@ -15,11 +15,10 @@
 <body>
      <ul>
         <li>
-            <a href="./multiplayer.html"><i class="bi bi-people-fill"></i> </a>
+            
                 </li>
                 <li class="title">Jogo de Advinhação de Palavras</li>
                 <li>
-            <a href="./ranking.html"><i class="bi bi-trophy-fill"></i> </a>
             <a href="./tutorial.html"><i class="bi bi-question-square-fill"></i> </a>
        </li>
      </ul>
@@ -32,23 +31,25 @@
 
      <main>
         
+            <!-- <a href="./lucas2.html"><i class="bi bi-question-square-fill"></i> </a>-->
 
         <div id="pontuacao">Pontuação: 0</div>
         <div id="board">
 
-            <div id="tentativas">
+           <div id="tentativas">
              
 
             </div>
+         <!--<i class="fa-solid fa-house"></i> -->
 
 
 
             <div class="row">
-                <input type="text" class="cell" maxlength="1" id="1" oninput="processarInput(this)">
-                <input type="text" class="cell" maxlength="1" id="2" oninput="processarInput(this)">
-                <input type="text" class="cell" maxlength="1" id="3" oninput="processarInput(this)">
-                <input type="text" class="cell" maxlength="1" id="4" oninput="processarInput(this)">
-                <input type="text" class="cell" maxlength="1" id="5" oninput="processarInput(this)">
+                <input type="text" class="cell" maxlength="1" id="1" oninput="processarInput(this, '2', null)" autocomplete="off">
+                <input type="text" class="cell" maxlength="1" id="2" oninput="processarInput(this, '3', '1')" autocomplete="off">
+                <input type="text" class="cell" maxlength="1" id="3" oninput="processarInput(this, '4', '2')" autocomplete="off">
+                <input type="text" class="cell" maxlength="1" id="4" oninput="processarInput(this, '5', '3')" autocomplete="off">
+                <input type="text" class="cell" maxlength="1" id="5" oninput="processarInput(this, null, '4')" autocomplete="off">
                 
                 <div>
                     <button onclick="play()">Enviar</button>
