@@ -175,7 +175,7 @@ input.errado:hover {
 .icon-container {
     display: flex;
     flex-direction: column;
-    justify-content: center; /* Centraliza os ícones */
+    justify-content: center;
     gap: 5px;
     border: 3px;
 }
