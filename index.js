@@ -171,6 +171,6 @@ function removerSimbolosEAcentos(texto) {
     element.value = converterMaiusculas(element.value);
     moverInput(element, proximoId, anteriorId);
   }
-
+//
 // Inicializa o jogo ao carregar
 inicializarJogo();
